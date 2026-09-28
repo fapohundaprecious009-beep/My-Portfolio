@@ -80,26 +80,109 @@ function App() {
 
 
             {/* {About me section} */}
-            <section className=" h-100 grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] gap-10 align-center m-25 justify-center">
-                <div>
-                    <div>
-                    <img src={aboutImg} alt="About Precious" className="w-50 h-50 rounded-2xl  object-cover" />
+            <section className=" w-full bg-white px-5 py-12 text-slate-800 font-sans">
+                <div className='mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-12'>
+                
+                {/* Left profile image & skills */}
+                    <div className='flex flex-col items-center md:col-span-3 md:items-start'>
+                    <div className='relative mb-8 ml-2'>
+                        <div className='absolute -left-5 top-8 h-32 w-52 rounded-xl bg-blue-200 md:h-36 md:w-52'>
+                            <img src={aboutImg} alt="About Precious" className='relative z-index-10 h-44 w-48 rounded-lg border-slate-300 border-slate-900 object-cover shadow:sm' />
+                        </div>
+
+                        <div className='w-full max-w-small'>
+                            <h3 className='font-semi-bold text-sm text-slate-700 mb-3'>Currently Working On:</h3>
+                            <div className='flex flex-wrap gap-2'>
+                                {[
+                                    ["⚛", "React JS"], 
+                                    ["〰", "Tailwind CSS"],
+                                    ["🟨", "Javascript"],
+                                    ["</>", "Frontend Development"],
+                                ] .map(([icon, skill]) => (
+                                    <span key={skill} className='inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-md text-slate-700'>
+                                        <span className='font-bold text-blue-600'> {icon} </span>
+                                    </span>
+
+                                ))}
+                            </div>
+                        </div>
                     </div>
 
-                    <div>
-                        <p className='font-bold text-1xl mt-5 mb-4'>Currently Working On:</p>
+                    {/* About me section */}
+                    <div className='md:col-span-5'>
+                        <div className='mb-1 flex items-center gap-3'>
+                            <span className='text-xs font-bold uppercase tracking-wider text-blue-600'>About Me </span>
+
+                            <span className='h-px w-6 bg-blue-400' />
+                        </div>
+                        <h1 className='text-2xl mb-2 font-bold tracking-tight text-slate-900 md:text-3xl'>Hi, I'm Precious</h1>
+
+                        <div className='space-y-3 text-sm leading-relaxed text-slate-600'>
+                            <p>
+                                I'm a Computer Science student and aspiring Front-End Developer passionate about 
+                                technology, creativity, and building digital experiences.
+                            </p>
+
+                            <p>
+                                I'm currently learning and exploring HTML, CSS, JavaScript, React.js, and Tailwind CSS. 
+                                I enjoy turning ideas into functional and interactive websites and discovering new ways 
+                                to make websites more attractive, responsive, and user-friendly. 
+                            </p>
+
+                            <p>
+                                My goal is <span className='font-md text-sky-700'>{" "}to become a skilled software developer and create digital experiences 
+                                that are not only visually appealing but also</span> useful and meaningful. 
+                            </p>
+                        </div>
+                        
+                        {/* Mindset */}
+                        <div className='mt-6 flex items-start gap-3'>
+                            <span className='mt-0.5 text-xl text-blue-600'>♧</span>
+
+                             <h3 className="text-sm font-semibold text-slate-800">My mindset:
+                            </h3>
+                            <p className="mt-1 text-sm italic text-blue-600">
+                                Learn. Build. Experiment. Improve. Repeat. 🚀
+                            </p>
+                        </div>
+                    </div>
                     </div>
 
-                    <div>
-                        <p className='bg-blue-100 p-2 rounded-2xl mb-3 w-50'>React Js</p>
-                        <p className='bg-blue-100 p-2 rounded-2xl mb-3 w-50'>Tailwind CSS</p>
-                        <p className='bg-blue-100 p-2 rounded-2xl mb-3 w-50'>Front-End Development</p>
-                    </div>
-                </div>
+                    {/* RIGHT: FUN FACTS */}
+                    <div className="md:col-span-4">
+                    <div className="rounded-xl border border-blue-50 bg-blue-50/80 p-5 shadow-sm md:p-6">
+                        <h2 className="mb-5 flex items-center gap-3 text-sm font-bold text-slate-800">
+                        <span className="text-lg text-blue-600">☆</span>
+                        Fun Facts
+                        </h2>
 
-                <div>
+                    <div className="space-y-5"></div>
+                    {[
+                        ["▣", "Computer Science Student"],
+                        ["▱", "Front-End Development"],
+                        ["⚛️", "Currently learning React"],
+                        ["◉", "Exploring UI Design"],
+                        ["✿", "Always building something"],
+                        ].map(([icon, fact]) => (
+                            <div
+                            key={fact}
+                            className="flex items-center gap-4 text-sm text-slate-600"
+                            >
+                            <span className="w-4 shrink-0 text-center text-lg font-bold text-blue-600">
+                                {icon}
+                            </span>
+                            <span>{fact}</span>
+                            </div>
+                            ))}
+                            </div>
+                        </div>
+                        </div>
+
+            </section>
+
+                {/* <div>
                     <h1 className='text-blue-700 text-1xl'>ABOUT ME</h1>
-                    <p className='font-bold text-4xl dark:text-blue-900'>Hi, I'm Precious</p>
+                    <p className='font-bold text-4xl dark:text-slate-900'>Hi, I'm Precious</p>
                     <p className=' mt-10 text-justify text-sm'>
                         I'm a Computer Science student and aspiring Front-End Developer passionate about 
                         technology, creativity, and building digital experiences.<br></br><br />
@@ -116,9 +199,9 @@ function App() {
                         My mindset:<br></br>
                      <span className='text-blue-800'>Learn. Build. Experiment. Improve. Repeat.</span>
 `                   </p>
-                </div>
+                </div> */}
 
-                <div className='bg-blue-100 h-85 w-80 mt-10  rounded-3xl'>
+                    {/* <div className='bg-blue-100 h-85 w-80 mt-10  rounded-3xl'>
                     <p className='font-bold px-6 pt-10' >⭐ Fun Facts</p>
                     <p className=' text-gray-500 px-6 pt-6'>
                         💻 Computer Science Student<br></br><br />
@@ -127,38 +210,69 @@ function App() {
                         🎨 Exploring UI Design<br></br><br />
                         🛠️ Always Building Something
                     </p>
-                </div>
-            </section>
+                </div> */}
+
+            {/* </section> */}
+
+
+            
 
             {/* What I Am Learning */}
-            <section className=' bg-blue-100 h-110 p-20'>
-                <div>
-                    <h1 className='text-blue-700 text-1xl text-center'>WHAT I'M LEARNING</h1>
-                    <p className='font-bold text-4xl text-center text-blue-900'>My Skills & Technologies</p>
+            <section className=' bg-blue-100 py-16 px-6'>
+            <div className='max-w-7xl mx-auto'>
+                {/* section header */}
+                <div className='text-center mb-10'>
+                    <h1 className='text-blue-700 text-1xl text-center font-bold tracking-wildest uppercase'>-WHAT I'M LEARNING-</h1>
+                    <p className='font-bold text-3xl text-center text-slate-900 md:text-4xl mt-2'>My Skills & Technologies</p>
                 </div>
 
-                <div className='grid md:grid-cols-4 p-10 gap-5'>
+                {/* skill card */}
+                <div className='max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 '>
                     
+                    {/* HTML & CSS */}
+                    <div className='bg-white shadow-sm text-center hover:shadow-md p-7 rounded-xl'>
+
+                    {/* HTML icon */}
+                        <img className='h-16 w-16 mx-auto mb-5' src="/skill1.png" alt="HTML icon" />
+
+                    {/* HTML texts */}
+                        <h1 className='font-bold mb-5 text-xl'>HTML & CSS</h1>
+                        <p className='text-gray-500 leading-relaxed text-sm'>For building the structures and style of websites.</p>
+                    </div>
+
+                    {/* Javascript */}
+                    <div className='bg-white shadow-sm text-center hover:shadow-md p-7 rounded-xl'>
+
+                    {/* Javascript icon */}
+                        <img className='h-16 w-16 mx-auto mb-5' src="/skill2.png" alt="Javascript icon" />
+
+                    {/* Javascript texts */}
+                        <h1 className='font-bold mb-5 text-xl'>JAVASCRIPT</h1>
+                        <p className='text-gray-500 leading-relaxed text-sm'>For adding interactivity and logic to websites.</p>
+                    </div>
+
+                    {/* React */}
+                    <div className='bg-white shadow-sm text-center hover:shadow-md p-7 rounded-xl'>
+
+                    {/* React icon */}
+                        <img className='h-16 w-16 mx-auto mb-5' src="/skill3.png" alt="React icon" />
+
+                    {/* React texts */}
+                        <h1 className='font-bold mb-5 text-xl'>REACT.JS</h1>
+                        <p className='text-gray-500 leading-relaxed text-sm'>For building dynamic and reusable user interfaces</p>
+                    </div>
                     
-                    <div className='bg-white h-40 w-60 border-gray-200 shadow-md text-center py-7 px-5 rounded-2xl'>
-                        <h1 className='font-bold mb-3 text-1xl'>HTML & CSS</h1>
-                        <p className='text-gray-800'>For building the structures and style of websites.</p>
+                    {/* Tailwind CSS */}
+                    <div className='bg-white shadow-sm text-center hover:shadow-md p-7 rounded-xl'>
+                    
+                    {/* Tailwind CSS icon */}
+                        <img className='h-16 w-16 mx-auto mb-5' src="/skill4.png" alt="Tailwind icon" />
+                    
+                    {/* Tailwind CSS texts */}
+                        <h1 className='font-bold mb-5 text-xl'>TAILWIND CSS</h1>
+                        <p className='text-gray-500 leading-relaxed text-sm'>For fast and flexible styling</p>
                     </div>
-
-                    <div className='bg-white h-40 w-60 border-gray-200 shadow-md text-center py-7 px-5 rounded-2xl'>
-                        <h1 className='font-bold mb-3 text-1xl'>JAVASCRIPT</h1>
-                        <p className='text-gray-800'>For adding interactivity and logic to websites.</p>
-                    </div>
-
-                    <div className='bg-white h-40 w-60 border-gray-200 shadow-md text-center py-7 px-5 rounded-2xl'>
-                        <h1 className='font-bold mb-3 text-1xl'>REACT.JS</h1>
-                        <p className='text-gray-800'>For building dynamic and reusable user interfaces</p>
-                    </div>
-
-                    <div className='bg-white h-40 w-60 border-gray-200 shadow-md text-center py-7 px-5 rounded-2xl'>
-                        <h1 className='font-bold mb-3 text-1xl'>TAILWIND CSS</h1>
-                        <p className='text-gray-800'>For fast and flexible styling</p>
-                    </div>
+                </div>
                 </div>
             </section>
 
