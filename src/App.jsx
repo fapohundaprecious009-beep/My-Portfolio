@@ -84,14 +84,14 @@ function App() {
             <div className= "absolute inset-0 bg-black/55"></div>
 
                 <div className="text-white max-w-3xl relative z-10">
-                    <p className="text-blue-300 text-lg sm:text-xl md:text-xl font-semibold mb-4">LEARN . REACT . WITH. ME</p>
+                    <p className="text-blue-300 text-lg text-sm md:text-xl font-semibold mb-4">COMPUTER SCIENCE STUDENT • FRONT-END DEVELOPER</p>
 
-                    <h1 className=" text-3xl md:text-6xl text-blue-500 font-bold mb-10"><span className='text-white'>Learn Technology</span> <br /> Build your future</h1>
+                    <h1 className=" text-2xl md:text-5xl text-white font-bold mb-10">Building Digital Experiences <br /> <span className='text-blue-500 text-2xl md:text-4xl'>One Project at a Time.</span></h1>
 
-                    <p className="text-gray-100 mb-15 text-xl md:text-xl">This is my first journey in REACT PROJECT. </p>
+                    <p className="text-gray-100 mb-15 text-sm md:text-xl">Computer Science student passionate about Front-End Development. </p>
 
                     <div className="flex justify-center gap-3 md:gap-5">
-                        <button className="bg-blue-600 text-white border-none rounded-lg cursor-pointer w-32 h-15 px-2 py-2 text-sm md:w-auto md:h-auto md:px-10 md:py-4 md:text-xl ">Learn with me</button>
+                        <button className="bg-blue-600 text-white border-none rounded-lg cursor-pointer w-32 h-15 px-2 py-2 text-sm md:w-auto md:h-auto md:px-10 md:py-4 md:text-xl ">View my Projects</button>
 
                         <button className="bg-white text-blue-600 border-2 border-white rounded-lg cursor-pointer w-32 h-15 px-2 py-2 text-sm md:w-auto md:h-auto md:px-10 md:py-4 md:text-xl ">Contact Me</button>
                     </div>
