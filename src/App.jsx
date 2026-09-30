@@ -86,14 +86,14 @@ function App() {
                 <div className="text-white max-w-3xl relative z-10">
                     <p className="text-blue-300 text-lg sm:text-xl md:text-2xl font-semibold mb-4">LEARN . REACT . WITH. ME</p>
 
-                    <h1 className="text-#111827 text-5xl md:text-6xl text-blue-700 font-bold mb-10"><span className='text-slate-900'>Learn Technology</span> <br /> Build your future</h1>
+                    <h1 className=" text-3xl md:text-6xl text-blue-500 font-bold mb-10"><span className='text-white'>Learn Technology</span> <br /> Build your future</h1>
 
-                    <p className="text-black mb-15 leading-1 text-3x1">This is my first journey in REACT PROJECT. </p>
+                    <p className="text-gray-100 mb-15 text-xl md:text-3xl">This is my first journey in REACT PROJECT. </p>
 
-                    <div className="flex justify-center gap-5">
-                        <button className="bg-blue-700 text-white border-none px-10 py-4 rounded-lg cursor-pointer text-4x1">Learn with me</button>
+                    <div className="flex justify-center gap-3 md:gap-5">
+                        <button className="bg-blue-600 text-white border-none rounded-lg cursor-pointer w-32 h-15 px-2 py-2 text-sm md:w-auto md:h-auto md:px-10 md:py-4 md:text-xl ">Learn with me</button>
 
-                        <button className="bg-white text-blue-700 border-2 border-white px-10 py-4 rounded-lg cursor-pointer text-4x1">Contact Me</button>
+                        <button className="bg-white text-blue-600 border-2 border-white rounded-lg cursor-pointer w-32 h-15 px-2 py-2 text-sm md:w-auto md:h-auto md:px-10 md:py-4 md:text-xl ">Contact Me</button>
                     </div>
                 </div>
             </section>
