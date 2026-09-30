@@ -1,5 +1,25 @@
 import aboutImg from './aboutus.jpeg';
 
+// Currently working on Data
+
+const currentlyWorkingOn = [
+    ["⚛", "React JS"], 
+    ["〰", "Tailwind CSS"],
+    ["🟨", "Javascript"],
+    ["</>", "Frontend Development"],
+];
+
+
+// Fun Facts Data
+
+const funFacts = [
+    ["▣", "Computer Science Student"],
+    ["▱", "Front-End Development"],
+    ["⚛️", "Currently learning React"],
+    ["◉", "Exploring UI Design"],
+    ["✿", "Always building something"],
+];
+
 // project Data 
 const projects = [
     {
@@ -80,105 +100,95 @@ function App() {
 
 
             {/* {About me section} */}
-            <section className=" w-full bg-white px-5 py-12 text-slate-800 font-sans">
-                <div className='mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-12'>
-                
-                {/* Left profile image & skills */}
-                    <div className='flex flex-col items-center md:col-span-3 md:items-start'>
-                    <div className='relative mb-8 ml-2'>
-                        <div className='absolute -left-5 top-8 h-32 w-52 rounded-xl bg-blue-200 md:h-36 md:w-52'>
-                            <img src={aboutImg} alt="About Precious" className='relative z-index-10 h-44 w-48 rounded-lg border-slate-300 border-slate-900 object-cover shadow:sm' />
+            {/* ABOUT */}
+            <section id="about" className="w-full scroll-mt-20 bg-white px-5 py-16 text-slate-800">
+                <div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-10 md:grid-cols-12">
+ 
+                    {/* LEFT: image + currently working on */}
+                    <div className="flex flex-col items-center md:col-span-3 md:items-start">
+                        <div className="relative mb-8 ml-2 h-52 w-48">
+                            <div className="absolute -left-4 top-4 h-full w-full rounded-xl bg-blue-200"></div>
+                            <img
+                                src={aboutImg}
+                                alt="About Precious"
+                                className="relative z-10 h-full w-full rounded-lg border border-slate-300 object-cover shadow-sm"
+                            />
                         </div>
-
-                        <div className='w-full max-w-small'>
-                            <h3 className='font-semi-bold text-sm text-slate-700 mb-3'>Currently Working On:</h3>
-                            <div className='flex flex-wrap gap-2'>
-                                {[
-                                    ["⚛", "React JS"], 
-                                    ["〰", "Tailwind CSS"],
-                                    ["🟨", "Javascript"],
-                                    ["</>", "Frontend Development"],
-                                ] .map(([icon, skill]) => (
-                                    <span key={skill} className='inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-md text-slate-700'>
-                                        <span className='font-bold text-blue-600'> {icon} </span>
+ 
+                        <div className="w-full max-w-sm">
+                            <h3 className="mb-3 text-sm font-semibold text-slate-700">Currently working on:</h3>
+                            <div className="flex flex-wrap gap-2">
+                                {currentlyWorkingOn.map(([icon, skill]) => (
+                                    <span
+                                        key={skill}
+                                        className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-slate-700"
+                                    >
+                                        <span className="font-bold text-blue-600">{icon}</span>
+                                        {skill}
                                     </span>
-
                                 ))}
                             </div>
                         </div>
                     </div>
-
-                    {/* About me section */}
-                    <div className='md:col-span-5'>
-                        <div className='mb-1 flex items-center gap-3'>
-                            <span className='text-xs font-bold uppercase tracking-wider text-blue-600'>About Me </span>
-
-                            <span className='h-px w-6 bg-blue-400' />
+ 
+                    {/* MIDDLE: about text */}
+                    <div className="md:col-span-5">
+                        <div className="mb-1 flex items-center gap-3">
+                            <span className="text-xs font-bold uppercase tracking-wider text-blue-600">About Me</span>
+                            <span className="h-px w-6 bg-blue-400" />
                         </div>
-                        <h1 className='text-2xl mb-2 font-bold tracking-tight text-slate-900 md:text-3xl'>Hi, I'm Precious</h1>
-
-                        <div className='space-y-3 text-sm leading-relaxed text-slate-600'>
+ 
+                        <h2 className="mb-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">Hi, I'm Precious</h2>
+ 
+                        <div className="space-y-3 text-sm leading-relaxed text-slate-600">
                             <p>
-                                I'm a Computer Science student and aspiring Front-End Developer passionate about 
+                                I'm a Computer Science student and aspiring Front-End Developer passionate about
                                 technology, creativity, and building digital experiences.
                             </p>
-
                             <p>
-                                I'm currently learning and exploring HTML, CSS, JavaScript, React.js, and Tailwind CSS. 
-                                I enjoy turning ideas into functional and interactive websites and discovering new ways 
-                                to make websites more attractive, responsive, and user-friendly. 
+                                I'm currently learning and exploring HTML, CSS, JavaScript, React.js, and Tailwind CSS.
+                                I enjoy turning ideas into functional and interactive websites and discovering new ways
+                                to make websites more attractive, responsive, and user-friendly.
                             </p>
-
                             <p>
-                                My goal is <span className='font-md text-sky-700'>{" "}to become a skilled software developer and create digital experiences 
-                                that are not only visually appealing but also</span> useful and meaningful. 
+                                My goal is{' '}
+                                <span className="font-medium text-sky-700">
+                                    to become a skilled software developer and create digital experiences that are not
+                                    only visually appealing but also
+                                </span>{' '}
+                                useful and meaningful.
                             </p>
                         </div>
-                        
-                        {/* Mindset */}
-                        <div className='mt-6 flex items-start gap-3'>
-                            <span className='mt-0.5 text-xl text-blue-600'>♧</span>
-
-                             <h3 className="text-sm font-semibold text-slate-800">My mindset:
-                            </h3>
-                            <p className="mt-1 text-sm italic text-blue-600">
-                                Learn. Build. Experiment. Improve. Repeat. 🚀
-                            </p>
+ 
+                        <div className="mt-6 flex items-start gap-3">
+                            <span className="mt-0.5 text-xl text-blue-600">♧</span>
+                            <div>
+                                <h3 className="text-sm font-semibold text-slate-800">My mindset:</h3>
+                                <p className="mt-1 text-sm italic text-blue-600">Learn. Build. Experiment. Improve. Repeat. 🚀</p>
+                            </div>
                         </div>
                     </div>
-                    </div>
-
-                    {/* RIGHT: FUN FACTS */}
+ 
+                    {/* RIGHT: fun facts */}
                     <div className="md:col-span-4">
-                    <div className="rounded-xl border border-blue-50 bg-blue-50/80 p-5 shadow-sm md:p-6">
-                        <h2 className="mb-5 flex items-center gap-3 text-sm font-bold text-slate-800">
-                        <span className="text-lg text-blue-600">☆</span>
-                        Fun Facts
-                        </h2>
-
-                    <div className="space-y-5"></div>
-                    {[
-                        ["▣", "Computer Science Student"],
-                        ["▱", "Front-End Development"],
-                        ["⚛️", "Currently learning React"],
-                        ["◉", "Exploring UI Design"],
-                        ["✿", "Always building something"],
-                        ].map(([icon, fact]) => (
-                            <div
-                            key={fact}
-                            className="flex items-center gap-4 text-sm text-slate-600"
-                            >
-                            <span className="w-4 shrink-0 text-center text-lg font-bold text-blue-600">
-                                {icon}
-                            </span>
-                            <span>{fact}</span>
-                            </div>
-                            ))}
+                        <div className="rounded-xl border border-blue-50 bg-blue-50/80 p-5 shadow-sm md:p-6">
+                            <h2 className="mb-5 flex items-center gap-3 text-sm font-bold text-slate-800">
+                                <span className="text-lg text-blue-600">☆</span>
+                                Fun Facts
+                            </h2>
+ 
+                            <div className="space-y-5">
+                                {funFacts.map(([icon, fact]) => (
+                                    <div key={fact} className="flex items-center gap-4 text-sm text-slate-600">
+                                        <span className="w-4 shrink-0 text-center text-lg font-bold text-blue-600">{icon}</span>
+                                        <span>{fact}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                        </div>
-
-            </section>       
+                    </div>
+                </div>
+            </section> 
 
             {/* What I Am Learning */}
             <section className=' bg-blue-100 py-16 px-6'>
