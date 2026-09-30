@@ -66,7 +66,7 @@ function App() {
                 <div className="text-white max-w-3xl relative z-10">
                     <p className="text-blue-300 text-lg sm:text-xl md:text-2xl font-semibold mb-4">LEARN . REACT . WITH. ME</p>
 
-                    <h1 className="text-#111827 text-5xl md:text-6xl text-blue-700 font-bold mb-10">Learn Technology <br /> Build your future</h1>
+                    <h1 className="text-#111827 text-5xl md:text-6xl text-blue-700 font-bold mb-10"><span className='text-slate-900'>Learn Technology</span> <br /> Build your future</h1>
 
                     <p className="text-black mb-15 leading-1 text-3x1">This is my first journey in REACT PROJECT. </p>
 
@@ -178,44 +178,7 @@ function App() {
                         </div>
                         </div>
 
-            </section>
-
-                {/* <div>
-                    <h1 className='text-blue-700 text-1xl'>ABOUT ME</h1>
-                    <p className='font-bold text-4xl dark:text-slate-900'>Hi, I'm Precious</p>
-                    <p className=' mt-10 text-justify text-sm'>
-                        I'm a Computer Science student and aspiring Front-End Developer passionate about 
-                        technology, creativity, and building digital experiences.<br></br><br />
-
-                        I'm currently learning and exploring HTML, CSS, JavaScript, React.js, and Tailwind CSS. 
-                        I enjoy turning ideas into functional and interactive websites and discovering new ways 
-                        to make websites more attractive, responsive, and user-friendly.<br></br><br />
-
-                        My goal is to become a skilled software developer and create digital experiences 
-                        that are not only visually appealing but also useful and meaningful.<br></br><br />
-                    </p>
-                    <p className='font-bold'>
-
-                        My mindset:<br></br>
-                     <span className='text-blue-800'>Learn. Build. Experiment. Improve. Repeat.</span>
-`                   </p>
-                </div> */}
-
-                    {/* <div className='bg-blue-100 h-85 w-80 mt-10  rounded-3xl'>
-                    <p className='font-bold px-6 pt-10' >⭐ Fun Facts</p>
-                    <p className=' text-gray-500 px-6 pt-6'>
-                        💻 Computer Science Student<br></br><br />
-                        🖥️ Front-End Development<br></br><br />
-                        ⚛️ Currently Learning React<br></br><br />
-                        🎨 Exploring UI Design<br></br><br />
-                        🛠️ Always Building Something
-                    </p>
-                </div> */}
-
-            {/* </section> */}
-
-
-            
+            </section>       
 
             {/* What I Am Learning */}
             <section className=' bg-blue-100 py-16 px-6'>
