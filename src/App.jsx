@@ -18,37 +18,44 @@ const funFacts = [
     ["⚛️", "Currently learning React"],
     ["◉", "Exploring UI Design"],
     ["✿", "Always building something"],
-];
+];    
 
 // project Data 
 const projects = [
+
+    {
+        title: "School Website",
+        description: "A school website designed to present information about the school, its programs, activities, and services.",
+        image: "/project2.jpeg",
+        tech: ["HTML", "CSS", "JavaScript"],
+        github: "https://github.com/fapohundaprecious009-beep/School-website",
+        live: "https://deleadersempiremodelschools.netlify.app/?",
+    },
+
     {
         title: "Precious Mall",
-        description: "My first html and css shopping mall website.",
+        description: "A simple e-commerce website designed to showcase products with a clean and user-friendly shopping interface.",
         image: "/project1.jpeg",
-        github: "#",
-        live: "#",
+        tech: ["HTML", "CSS",],
+        github: "https://vercel.com/fapohundaprecious009-beep/my-mall",
+        live: "https://my-mall-delta.vercel.app/",
     },
+        
         {
-        title: "Precious Mall",
-        description: "My first html and css shopping mall website.",
-        image: "/project2.jpeg",
-        github: "#",
-        live: "#",
-    },
-        {
-        title: "Precious Mall",
-        description: "My first html and css shopping mall website.",
+        title: "Salon Website",
+        description: "A modern salon website created to showcase beauty services, provide information, and create an engaging user experience.",
         image: "/project3.jpeg",
-        github: "#",
-        live: "#",
+        tech: ["HTML", "CSS",],
+        github: "https://github.com/fapohundaprecious009-beep/Salon-Website",
+        live: "https://salon-website-rho-mocha.vercel.app/",
     },
         {
-        title: "Precious Mall",
-        description: "My first html and css shopping mall website.",
+        title: "Doorwin - Window & Door",
+        description: "A responsive website for a window and door company, featuring services, projects, FAQs and a contact section.",
         image: "/project4.jpeg",
-        github: "#",
-        live: "#",
+        tech: ["HTML", "CSS", ],
+        github: "https://github.com/fapohundaprecious009-beep/Doorwin-Website",
+        live: "https://mydoor-website.vercel.app/",
     },
 ];
 
@@ -194,10 +201,21 @@ function App() {
             <section className=' bg-blue-100 py-16 px-6'>
             <div className='max-w-7xl mx-auto'>
                 {/* section header */}
-                <div className='text-center mb-10'>
-                    <h1 className='text-blue-700 text-1xl text-center font-bold tracking-wildest uppercase'>-WHAT I'M LEARNING-</h1>
-                    <p className='font-bold text-3xl text-center text-slate-900 md:text-4xl mt-2'>My Skills & Technologies</p>
-                </div>
+                <div className="text-center mb-10">
+            <div className="flex items-center justify-center gap-3">
+                <span className="h-px w-10 bg-blue-400"></span>
+
+                <h1 className="text-blue-700 text-xl font-bold tracking-widest uppercase">
+                    WHAT I'M LEARNING
+                </h1>
+
+                <span className="h-px w-10 bg-blue-400"></span>
+            </div>
+
+                <p className="font-bold text-3xl text-slate-900 md:text-4xl mt-2">
+                    My Skills & Technologies
+                </p>
+            </div>
 
                 {/* skill card */}
                 <div className='max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 '>
@@ -250,29 +268,42 @@ function App() {
             </section>
 
             {/* My Projects */}
-            <section className='bg-white h-200 p-20'>
-                <div>
-                    <h1 className='text-blue-700 text-1xl text-center'>MY PROJECTS</h1>
-                    <p className='font-bold text-4xl text-center text-blue-900'>Featured Technologies</p>
-                </div>
+            <section id='projects' className='bg-white scroll-mt-20 px-5 py-16 md:px-16'>
+            <div className="text-center mb-12">
+                <h1 className='uppercase text-blue-700 text-sm font-bold tracking-wider'>My projects</h1>
+                <p className='text-slate-900 text-xl md:text-4xl mt-2 font-bold'>Featured Technologies</p>
+        
+            </div>
+            <div className='max-w-7xl max-w-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5'>
+                {projects.map((project, index) => (
+                    <div key={index} className='flex flex-col border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition p-4 '>
+                        {/* Project image */}
+                        <img className='h-40 w-full rounded-xl object-cover bg-slate-100 mb-4' src={project.image} alt={project.title} />
 
-                <div className='grid md:grid-cols-4 gap-5 mt-20'>
-                    <div className='bg-white border h-80 w- border-gray-200 rounded-2xl shadow-md'>
+                        {/* Project texts */}
+                        <h1 className='text-slate-900 font-bold text-lg mb-2'>{project.title}</h1>
 
+                        <p className='text-sm leading-relaxed mb-4 text-gray-500 '>{project.description}</p>
+
+                        {/* Technologies */}
+                        <div className='mt-auto'>
+                            <p className='text-sm font-semibold text-slate-500 mb-2'>Technologies:</p>
+                            <div className='flex flex-wrap gap-2 mb-5'> 
+                                {project.tech.map((t) => (
+                                    <span key={t} className='rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700'>{t}</span>
+                                ) )}
+                            </div>
+                        
+                        {/* Buttons */}
+                        <div className='flex gap-3'>
+                            <a href={project.live} className='flex-1 text-center text-white bg-blue-600 rounded-lg px-3 py-2 text-sm font-semibold'>Live Demo</a>
+
+                            <a href={project.github} className='flex-1 text-center text-blue-600 border border-blue-600 rounded-lg px-3 py-2 text-sm font-semibold hover:bg-blue-50'>GitHub</a>
+                        </div>
+                        </div>
                     </div>
-
-                    <div className='bg-white border h-80 border-gray-200 rounded-2xl shadow-md'>
-
-                    </div>
-
-                    <div className='bg-white border h-80 border-gray-200 rounded-2xl shadow-md'>
-
-                    </div>
-
-                    <div className='bg-white border h-80 border-gray-200 rounded-2xl shadow-md'>
-
-                    </div>
-                </div>
+                ))}
+            </div>
             </section>
 
         </div>
