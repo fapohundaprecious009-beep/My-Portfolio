@@ -37,7 +37,7 @@ const projects = [
         description: "A simple e-commerce website designed to showcase products with a clean and user-friendly shopping interface.",
         image: "/project1.jpeg",
         tech: ["HTML", "CSS",],
-        github: "https://vercel.com/fapohundaprecious009-beep/my-mall",
+        github: "https://github.com/fapohundaprecious009-beep/Precious-Mall",
         live: "https://my-mall-delta.vercel.app/",
     },
         
