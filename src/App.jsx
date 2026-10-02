@@ -50,7 +50,7 @@ const projects = [
         live: "https://salon-website-rho-mocha.vercel.app/",
     },
         {
-        title: "Doorwin - Window & Door",
+        title: "Doorwin Website",
         description: "A responsive website for a window and door company, featuring services, projects, FAQs and a contact section.",
         image: "/project4.jpeg",
         tech: ["HTML", "CSS", ],
@@ -58,6 +58,41 @@ const projects = [
         live: "https://mydoor-website.vercel.app/",
     },
 ];
+
+
+// My Learrning Journey Data
+const journeys = [
+    {
+        image: "/skill1.png",
+        title: "HTML & CSS",
+        description:"Build the structure and style",
+    },
+
+    {
+        image: "/skill2.png",
+        title: "JavaScript",
+        description:"Add interactivity and logic",
+    },
+
+    {
+        image: "/skill3.png",
+        title: "React.js",
+        description:"Build dynamic UI components",
+    },
+
+    {
+        image: "/skill4.png",
+        title: "Tailwind CSS",
+        description:"Style faster and smarter",
+    },
+
+    {
+        image: "/favicon.svg",
+        title: "More to come...",
+        description:"Keep building, keep growing",
+    },
+];
+
 
 function App() {
     return (
@@ -147,7 +182,7 @@ function App() {
  
                         <h2 className="mb-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">Hi, I'm Precious</h2>
  
-                        <div className="space-y-3 text-sm leading-relaxed text-slate-600">
+                        <div className="space-y-3 text-sm leading-relaxed text-slate-600 text-justify">
                             <p>
                                 I'm a Computer Science student and aspiring Front-End Developer passionate about
                                 technology, creativity, and building digital experiences.
@@ -205,7 +240,7 @@ function App() {
             <div className="flex items-center justify-center gap-3">
                 <span className="h-px w-10 bg-blue-400"></span>
 
-                <h1 className="text-blue-700 text-xl font-bold tracking-widest uppercase">
+                <h1 className="text-blue-700 text-sm font-bold tracking-widest uppercase">
                     WHAT I'M LEARNING
                 </h1>
 
@@ -269,11 +304,23 @@ function App() {
 
             {/* My Projects */}
             <section id='projects' className='bg-white scroll-mt-20 px-5 py-16 md:px-16'>
-            <div className="text-center mb-12">
-                <h1 className='uppercase text-blue-700 text-sm font-bold tracking-wider'>My projects</h1>
-                <p className='text-slate-900 text-xl md:text-4xl mt-2 font-bold'>Featured Technologies</p>
-        
+                <div className="text-center mb-10">
+
+            <div className="flex items-center justify-center gap-3">
+                <span className="h-px w-10 bg-blue-400"></span>
+
+                <h1 className="uppercase text-blue-700 text-sm font-bold tracking-widest">
+                     My Projects
+                </h1>
+
+                <span className="h-px w-10 bg-blue-400"></span>
             </div>
+
+            <p className="text-slate-900 text-xl md:text-4xl mt-2 font-bold">
+                Featured Technologies
+            </p>
+
+                </div>
             <div className='max-w-7xl max-w-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5'>
                 {projects.map((project, index) => (
                     <div key={index} className='flex flex-col border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition p-4 '>
@@ -283,7 +330,7 @@ function App() {
                         {/* Project texts */}
                         <h1 className='text-slate-900 font-bold text-lg mb-2'>{project.title}</h1>
 
-                        <p className='text-sm leading-relaxed mb-4 text-gray-500 '>{project.description}</p>
+                        <p className='text-sm leading-relaxed mb-4 text-gray-500 text-justify'>{project.description}</p>
 
                         {/* Technologies */}
                         <div className='mt-auto'>
@@ -305,6 +352,138 @@ function App() {
                 ))}
             </div>
             </section>
+
+
+                {/* My Learning Journey */}
+            <section className='dark:bg-blue-950 pt-10'>
+                <div className='text-center max-w-7xl mx-auto'>
+                    <div className='flex items-center justify-center gap-3'>
+                        <span className='h-px w-10 bg-blue-300'/>
+                        <h1 className='uppercase text-white text-sm font-bold tracking-wildest'>My Learning Journey</h1>
+                        <span className='h-px w-10 bg-blue-300'/>
+                    </div>
+                    <p className='text-xl md:text-4xl mt-2 text-white font-bold text-2xl'>From Basics to Bigger Goals</p>
+                </div>
+
+                <div className="grid grid-cols-1 px-4 py-10 md:grid-cols-5 gap-8">
+
+                    {journeys.map((journey, index) => (
+                        <div key={index} className="relative text-center">
+
+                    {/* Icon */}
+                        <div className="w-16 h-16 mx-auto rounded-full bg-blue-900 flex items-center justify-center">
+                            <img
+                                src={journey.image}
+                                alt={journey.title}
+                                className="w-10 h-10"
+                            />
+                        </div>
+
+                {/* Title */}
+                    <h3 className="text-white font-bold mt-4">
+                        {journey.title}
+                    </h3>
+
+                {/* Description */}
+                    <p className="text-blue-200 text-sm mt-1">
+                        {journey.description}
+                    </p>
+
+                {/* Arrow */}
+                    {index < journeys.length - 1 && (
+                        <span className="hidden md:block absolute top-7 -right-5 text-blue-400 text-6xl">
+                            →
+                        </span>
+                     )}
+
+                </div>
+                 ))}
+
+            </div>
+
+        </section>
+                
+            {/* Contact Me */}
+        <section id='contact' className='grid grid-cols-1 md:grid-cols-2 gap-15 px-10 py-10'>
+            {/* Contact Me Left Hand side */}
+                <div>
+                    <div className="mb-1 flex items-center gap-3">
+                            <span className="text-xs font-bold uppercase tracking-wider text-blue-600">Get in touch</span>
+                            <span className="h-px w-6 bg-blue-400" />
+                        </div>
+ 
+                        <h2 className="mb-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">Contact Me</h2>
+
+                        <p className='text-justify text-gray-500'>I'd love to hear from you! Whether you have a question, project idea, or just want to say hi - feel free to reach out.</p>
+
+                        <p className='mt-5 text-slate-900 font-bold'> <span className='mr-4'>📧</span> fapohundaprecious009@gmail.com</p>
+                        <p className='mt-3 text-slate-900 font-bold'> <span className='mr-4'>📞</span> 07076480236</p>
+                </div>
+
+                 {/* Contact me form */}
+                <div className="bg-white shadow-md rounded-2xl p-6">
+            <form>
+                <div className='flex gap-8'>
+                    <div>
+                    <label htmlFor="name" className="block mb-2 font-medium">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your name"
+                        className="w-60 border border-slate-300 rounded-lg px-3 py-2 mb-2 outline-none focus:border-blue-600"
+                    />
+                    </div>
+
+        <div>
+                    <label htmlFor="email" className="block mb-2 font-medium">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your@email.com"
+                        className="w-60 border border-slate-300 rounded-lg px-3 py-2 mb-2 outline-none focus:border-blue-600"
+                    />
+                    </div>
+        </div>
+                    <label htmlFor="message" className="block mb-2 font-medium">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Type your message here...."
+                        className="w-full border border-slate-300 rounded-lg px-4 py-3 mb-4 outline-none focus:border-blue-600"
+                        rows="2"
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700"
+                    >
+                        Send Message
+                    </button>
+        </form>
+        </div>
+        </section>
+    
+        {/* Footer */}
+    <section className='bg-blue-950 px-5'>
+            <div flex items-center justify-center>
+                <div>
+                    <p className='px-5 py-7 text-blue-300'>Precious</p> 
+                </div>
+
+                <div>
+                    <p className='text-gray-500'> © 2026 Precious. All rights reserved.</p>
+                </div>
+            </div>
+    </section>
+        
 
         </div>
     );
