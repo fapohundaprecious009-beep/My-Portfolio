@@ -479,7 +479,7 @@ function App() {
                 </div>
 
                 <div>
-                    <p className='text-gray-500'> © 2026 Precious. All rights reserved.</p>
+                    <p className='text-gray-500'> ©2026 Precious. All rights reserved.</p>
                 </div>
             </div>
     </section>
